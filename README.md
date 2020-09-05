@@ -7,7 +7,7 @@ docker build -t assignmentapp .
 ### To start all services - Application, Redis & Kafka :
 ```
 cd submission
-docker-compose updocker-compose up -d
+docker-compose up -d
 ```
 ### To deploy Application in ECS :
 ```
