@@ -14,7 +14,7 @@ docker-compose updocker-compose up -d
 cd submission
 aws cloudformation create-stack --template-body file://$PWD/infra/app.yml --stack-name app-cluster
 ```
-**The CloudFormation Template assumes that a parent Network Stack has been created in AWS Fargate (as per the Assignment.md Expectations Section) and the following are exported :**
+**The CloudFormation Template assumes that a parent Network Stack (referred to as "teststack" in the YAML template : can be overridden using - ```aws cloudformation create-stack --template-body file://$PWD/infra/app.yml --stack-name app-cluster --parameters ParameterKey=StackName,ParameterValue=<StackName>```) has been created in AWS Fargate (as per the Assignment.md Expectations Section) and the following are exported :**
 * ClusterName (The name of the ECS cluster)
 * VPCId (The ID of the VPC in which thestack is deployed)
 * SubnetOne (Public subnet one)
